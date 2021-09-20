@@ -4,6 +4,8 @@ const dotenv = require('dotenv')
 const mysql = require('mysql')
 const path = require('path')
 
+dotenv.config({ path: './config/config.env' });
+
 const app = express();
 
 const route = require('./routes/route');
