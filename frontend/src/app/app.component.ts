@@ -67,6 +67,7 @@ export class AppComponent {
   getMovie(){
     this.Service.getMovies().subscribe(response => {
       this.details=response
+      console.log(this.details)
     })
   }
 }
