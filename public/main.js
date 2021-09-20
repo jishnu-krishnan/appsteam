@@ -208,7 +208,6 @@ class AppComponent {
     getNames() {
         this.Service.getMovieNames().subscribe(response => {
             this.options = response;
-            console.log('res', response);
             //this.filteredOptions = response;
         });
     }
@@ -224,7 +223,6 @@ class AppComponent {
     getMovie() {
         this.Service.getMovies().subscribe(response => {
             this.details = response;
-            console.log(this.details);
         });
     }
 }
