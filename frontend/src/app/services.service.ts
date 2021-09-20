@@ -7,8 +7,8 @@ import { map, catchError, retry } from "rxjs/operators";
   providedIn: 'root'
 })
 export class ServicesService {
-  baseUrl:string = 'http://localhost:3000/api';
-  //baseUrl:string = 'api';
+  //baseUrl:string = 'http://localhost:3000/api';
+  baseUrl:string = 'api';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   
   constructor(private http:HttpClient) { }
