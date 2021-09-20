@@ -57,7 +57,7 @@ export class AppComponent {
     const data={
       name:value
     }
-     console.log('hgj',value);
+    
     this.Service.getMovieDetails(JSON.stringify(data)).subscribe(response => {
       this.details=response
       //console.log(this.details)
