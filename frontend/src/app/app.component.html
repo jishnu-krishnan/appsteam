@@ -1,0 +1,48 @@
+<div>
+  
+  <div class="container">
+    <div class="title container center">
+      <h1><b>Malayalam movies list</b></h1>
+      <div class="content">The new malayalam movies list and its rating</div>
+    </div>
+    <div class="container">
+      <!-- <div class=card> -->
+        <form [formGroup]="searchForm">
+          <mat-form-field>
+            <mat-label>
+              Search....
+            </mat-label>
+            <input formControlName="name" matInput type="text" [matAutocomplete]="auto" />
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let item of filteredOptions" [value]="item">
+                {{item}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      <!-- </div> -->
+    </div>
+    <div class="container " >
+      <div class=card *ngFor="let val of details ">
+        <div class="name">
+          <h3>{{val.Name}}</h3>
+        </div>
+          <div class="items">
+            <div class="row">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Genre</td>
+                    <td>{{val.Genre}}</td>
+                    <td>Rating</td>
+                    <td>{{val.Rating}} %</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div> 
+  <router-outlet></router-outlet>
+</div>
