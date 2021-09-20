@@ -208,6 +208,7 @@ class AppComponent {
     getNames() {
         this.Service.getMovieNames().subscribe(response => {
             this.options = response;
+            console.log('res', response);
             //this.filteredOptions = response;
         });
     }
