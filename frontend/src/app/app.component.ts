@@ -15,6 +15,8 @@ export class AppComponent {
   filteredOptions = []
   searchForm : FormGroup;
   
+  page = 1;
+  totalLength : any
   constructor(
     public fb: FormBuilder,
     private Service : ServicesService,
@@ -60,6 +62,7 @@ export class AppComponent {
     
     this.Service.getMovieDetails(JSON.stringify(data)).subscribe(response => {
       this.details=response
+      this.totalLength=response.length
       //console.log(this.details)
     })
   }
@@ -67,6 +70,7 @@ export class AppComponent {
   getMovie(){
     this.Service.getMovies().subscribe(response => {
       this.details=response
+      this.totalLength=response.length
     })
   }
 }

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatInputModule } from '@angular/material/input';
@@ -24,6 +24,7 @@ import { ServicesService } from './services.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent, ServicesService]
