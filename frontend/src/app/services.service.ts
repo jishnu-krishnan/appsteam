@@ -16,7 +16,7 @@ export class ServicesService {
   // Get select Movie for home page
   getMovies(): Observable<any> {
     let url= `${this.baseUrl}/list`
-    return this.http.get(url,{headers:this.headers} )//.pipe(map((response:[])=> response.map(item => item['Name'])))
+    return this.http.get(url,{headers:this.headers} )
   }
 
   // Get select Movie names for selection box
